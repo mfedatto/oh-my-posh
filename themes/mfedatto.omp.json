@@ -26,7 +26,7 @@
             "time_format": "15:04:05"
           },
           "style": "diamond",
-          "template": " \u2665 {{ .CurrentDate | date .Format }} ",
+          "template": " \ue384 {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "<transparent,#00FFFF>\ue0b2</>",
           "type": "time"
         },
@@ -120,7 +120,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": " \ueb05 ",
+          "template": " \uf054",
           "type": "status"
         }
       ],
