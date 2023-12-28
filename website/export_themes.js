@@ -68,6 +68,7 @@ themeConfigOverrrides.set('catppuccin_latte.omp.json', newThemeConfig(40, 40, 'I
 themeConfigOverrrides.set('catppuccin_frappe.omp.json', newThemeConfig(40, 40, 'IrwinJuice', '#303446'));
 themeConfigOverrrides.set('catppuccin_macchiato.omp.json', newThemeConfig(40, 40, 'IrwinJuice', '#24273A'));
 themeConfigOverrrides.set('catppuccin_mocha.omp.json', newThemeConfig(40, 40, 'IrwinJuice', '#1E1E2E'));
+themeConfigOverrrides.set('mfedatto.omp.json', newThemeConfig(40, 40, 'MFedatto'));
 
 (async () => {
   const themes = await fs.promises.readdir(themesConfigDir);
