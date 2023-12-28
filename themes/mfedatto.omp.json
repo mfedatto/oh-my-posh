@@ -5,6 +5,13 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "docker",
+          "style": "diamond",
+          "foreground": "#000000",
+          "background": "#0B59E7",
+          "template": "\uf308 {{ .Context }}"
+        },
+        {
           "background": "#EAF6FC",
           "foreground": "#1A2A33",
           "leading_diamond": "\ue0b2",
@@ -14,7 +21,7 @@
             "windows": "\ue62a "
           },
           "style": "diamond",
-          "template": " {{ if .Root }}\uea86 {{ end }}{{ .UserName }} @ {{ if .WSL }}WSL at {{ end }}{{ .HostName }} {{ .Icon }}",
+          "template": " {{ if .Root }}\uea86 {{ end }}{{ .UserName }} @ {{ if .WSL }}\ue712 at {{ end }}{{ .HostName }} {{ .Icon }} ",
           "trailing_diamond": "<transparent,#EAF6FC>\ue0b2</>",
           "type": "os"
         },
