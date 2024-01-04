@@ -50,7 +50,7 @@
             "threshold": 0
           },
           "style": "diamond",
-          "template": "\u2770 {{ .FormattedMs }} \u2771",
+          "template": " {{ .FormattedMs }} ",
           "trailing_diamond": "",
           "type": "executiontime"
         }
