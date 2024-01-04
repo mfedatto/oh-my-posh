@@ -5,65 +5,53 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "docker",
-          "style": "diamond",
-          "foreground": "#000000",
-          "background": "#0B59E7",
-          "template": "\uf308 {{ .Context }}"
-        },
-        {
           "background": "#EAF6FC",
           "foreground": "#1A2A33",
-          "leading_diamond": "\ue0b2",
-          "properties": {
-            "macos": "\uf179 ",
-            "ubuntu": "\uf31b ",
-            "windows": "\ue62a "
-          },
+          "leading_diamond": "",
           "style": "diamond",
-          "template": " {{ if .Root }}\uea86 {{ end }}{{ .UserName }} @ {{ if .WSL }}\ue712 at {{ end }}{{ .HostName }} {{ .Icon }} ",
-          "trailing_diamond": "<transparent,#EAF6FC>\ue0b2</>",
+          "template": "\u2770 {{ if .Root }}\u272f {{ end }}{{ .UserName }} @ {{ if .WSL }}WSL at {{ end }}{{ .HostName }} \u2771",
+          "trailing_diamond": "",
           "type": "os"
         },
         {
           "background": "#00FFFF",
           "foreground": "#1A2A33",
-          "leading_diamond": "\ue0b2",
+          "leading_diamond": "",
           "properties": {
             "time_format": "15:04:05"
           },
           "style": "diamond",
-          "template": " \ue384 {{ .CurrentDate | date .Format }} ",
-          "trailing_diamond": "<transparent,#00FFFF>\ue0b2</>",
+          "template": "\u2770 {{ .CurrentDate | date .Format }} \u2771",
+          "trailing_diamond": "",
           "type": "time"
         },
         {
           "background": "#20FFA6",
           "foreground": "#1A2A33",
-          "leading_diamond": "\ue0b2",
+          "leading_diamond": "",
           "style": "diamond",
-          "template": "\ue266 CPU: {{ round .PhysicalPercentUsed .Precision }}% | ",
+          "template": "\u2770 CPU: {{ round .PhysicalPercentUsed .Precision }}% | ",
           "type": "sysinfo"
         },
         {
           "background": "#20FFA6",
           "foreground": "#1A2A33",
           "style": "diamond",
-          "template": "RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1068786176.0) }}GB \ue266 ",
-          "trailing_diamond": "<transparent,#20FFA6>\ue0b2</>",
+          "template": "RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1068786176.0) }}GB  \u2771",
+          "trailing_diamond": "",
           "type": "sysinfo"
         },
         {
-          "background": "#00FFFF",
+          "background": "transparent",
           "foreground": "#1A2A33",
-          "leading_diamond": "\ue0b2",
+          "leading_diamond": "",
           "properties": {
             "style": "roundrock",
             "threshold": 0
           },
           "style": "diamond",
-          "template": " {{ .FormattedMs }} ",
-          "trailing_diamond": "\ue0b0",
+          "template": "\u2770 {{ .FormattedMs }} \u2771",
+          "trailing_diamond": "",
           "type": "executiontime"
         }
       ],
@@ -75,21 +63,21 @@
         {
           "background": "#EAF6FC",
           "foreground": "#1A2A33",
-          "leading_diamond": "\ue0b2",
+          "leading_diamond": "",
           "properties": {
             "fetch_package_manager": true,
-            "npm_icon": " <#20FFA6>\ue5fa</> ",
-            "yarn_icon": " <#00FFFF>\ue6a7</>"
+            "npm_icon": " <#20FFA6>npm</> ",
+            "yarn_icon": " <#00FFFF>yarn</>"
           },
           "style": "diamond",
-          "template": "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-          "trailing_diamond": "<transparent,#EAF6FC>\ue0b2</>",
+          "template": "\u2770 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \u2771",
+          "trailing_diamond": "",
           "type": "node"
         },
         {
           "background": "#FFE500",
           "foreground": "#1A2A33",
-          "leading_diamond": "\ue0b2",
+          "leading_diamond": "",
           "properties": {
             "branch_icon": "\ue725 ",
             "fetch_stash_count": true,
@@ -98,8 +86,8 @@
             "fetch_worktree_count": true
           },
           "style": "diamond",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
-          "trailing_diamond": "\ue0b0",
+          "template": "\u2770 {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \u270e {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \u2611 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \u26f6 {{ .StashCount }}{{ end }} \u2771",
+          "trailing_diamond": "",
           "type": "git"
         }
       ],
@@ -112,12 +100,12 @@
         {
           "foreground": "#EAF6FC",
           "properties": {
-            "folder_icon": "\uf07b",
+            "folder_icon": "\u2ba1",
             "home_icon": "home",
             "style": "agnoster_full"
           },
           "style": "diamond",
-          "template": " \ue5ff {{ .Path }} ",
+          "template": "\u2ba1 {{ .Path }} ",
           "type": "path"
         },
         {
@@ -127,7 +115,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": " \uf054",
+          "template": "\u03bb ",
           "type": "status"
         }
       ],
@@ -138,7 +126,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "#EAF6FC",
-    "template": "\ue285 "
+    "template": "\u03bb "
   },
   "version": 2
 }
