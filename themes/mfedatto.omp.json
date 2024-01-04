@@ -37,7 +37,7 @@
           "background": "#20FFA6",
           "foreground": "#1A2A33",
           "style": "diamond",
-          "template": "RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1068786176.0) }}GB  \u2771",
+          "template": "RAM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1068786176.0) }}GB \u2771",
           "trailing_diamond": "",
           "type": "sysinfo"
         },
